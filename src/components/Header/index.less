@@ -1,4 +1,5 @@
 .header {
+  background-color: #fff;
   .header-top {
     padding: 0 20px;
 
@@ -16,24 +17,36 @@
     line-height: 40px;
     border-top: 1px solid #f9c700;
     .breadcrumb-title {
-        text-align: center;
+      text-align: center;
+      position: relative;
+      &:after {
+        position: absolute;
+        content: '';
+        left: 50%;
+        top: 50%;
+        border-top: 9px solid #eee;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        margin-top: 10px;
+        margin-left: -12px;
+      }
     }
     .weather {
-        text-align: right;
-        font-size: 14px;
-        .date{
-          margin-right: 10px;
-          vertical-align: middle;
+      text-align: right;
+      font-size: 14px;
+      .date {
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+      .weather-detail {
+        margin-left: 10px;
+        vertical-align: middle;
+      }
+      .weather-img {
+        img {
+          height: 15px;
         }
-        .weather-detail{
-          margin-left: 10px;
-          vertical-align: middle;
-        }
-        .weather-img{
-          img{
-            height: 15px;
-          }
-        }
+      }
     }
   }
 }

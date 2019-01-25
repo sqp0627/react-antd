@@ -2,13 +2,12 @@ import React, { Component } from 'react'
 import { Row, Menu } from 'antd'
 import menuList from './menuConfig'
 import './index.less'
-import { isTypeNode } from 'typescript'
 
-const SubMenu = Menu.SubMenu
+const SubMenu = Menu.SubMenu;
 
 export default class NavLeft extends Component {
   componentWillMount() {
-    const menuTreeNode = this.renderMenu(menuList)
+    const menuTreeNode = this.renderMenu(menuList);
 
     this.setState({
       menuTreeNode
